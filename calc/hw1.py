@@ -13,7 +13,7 @@ def application(environ, start_response) :
         sum = first_num + second_num
         mul = first_num * second_num
     except Exception as e :
-        error = "e"
+        error = e
     response_body = html % {'sum':sum, 'mul':mul, 'error':error}
 
     status = '200 OK'
