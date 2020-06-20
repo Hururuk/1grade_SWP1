@@ -14,6 +14,9 @@ def application(environ, start_response) :
     except ValueError :
         sum = -1
         mul = -1
+    except NameError :
+        sum = -2
+        mul = -2
     response_body = html % {'sum':sum, 'mul':mul}
 
     status = '200 OK'
