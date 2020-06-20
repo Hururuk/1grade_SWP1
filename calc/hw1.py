@@ -12,10 +12,6 @@ def application(environ, start_response) :
         first_num, second_num = int(first_num), int(second_num)
         sum = first_num + second_num
         mul = first_num * second_num
-    except ValueError as e :
-        errror = "e"
-    except NameError as e:
-        error = "e"
     except Exception as e :
         error = "e"
     response_body = html % {'sum':sum, 'mul':mul, 'error':error}
